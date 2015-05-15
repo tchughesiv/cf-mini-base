@@ -7,4 +7,4 @@ WORKDIR /root
 ENV HOME /root
 ENV INSTALLER_BRANCH v205
 
-RUN curl -s -k -B https://raw.githubusercontent.com/tchughesiv/cf_nise_installer/${INSTALLER_BRANCH}/scripts/install_ruby.sh > /root/install_ruby.sh && chmod u+x /root/*.sh && /root/install_ruby.sh && rm -rf /var/lib/apt/lists/* && apt-get clean
+RUN apt-get update && apt-get -yq install curl sudo && curl -s -k -B https://raw.githubusercontent.com/tchughesiv/cf_nise_installer/${INSTALLER_BRANCH}/scripts/install_ruby.sh > /root/install_ruby.sh && chmod u+x /root/*.sh && /root/install_ruby.sh && rm -rf /var/lib/apt/lists/* && apt-get clean
