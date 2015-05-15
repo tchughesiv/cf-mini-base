@@ -1,0 +1,10 @@
+# CF Mini Base
+# version 0.1
+FROM ubuntu:12.04.5
+MAINTAINER Tommy Hughes <tchughesiv@gmail.com>
+
+WORKDIR /root
+ENV HOME /root
+ENV INSTALLER_BRANCH v205
+
+RUN curl -s -k -B https://raw.githubusercontent.com/tchughesiv/cf_nise_installer/${INSTALLER_BRANCH}/scripts/install_ruby.sh > /root/install_ruby.sh && chmod u+x /root/*.sh && /root/install_ruby.sh && rm -rf /var/lib/apt/lists/* && apt-get clean
