@@ -7,4 +7,4 @@ WORKDIR /root
 ENV HOME /root
 ENV INSTALLER_BRANCH v205
 
-RUN apt-get update && apt-get -yq install curl sudo dnsmasq inetutils-ping rsyslog cron lvm2 thin-provisioning-tools && sed -i 's/^mesg n/tty -s \&\& mesg n/g' /root/.profile && curl -s -k -B https://raw.githubusercontent.com/tchughesiv/cf_nise_installer/${INSTALLER_BRANCH}/scripts/install_ruby.sh > /root/install_ruby.sh && chmod u+x /root/*.sh && /root/install_ruby.sh
+RUN apt-get update && apt-get -yq install curl sudo dnsmasq inetutils-ping rsyslog cron lvm2 && sed -i 's/^mesg n/tty -s \&\& mesg n/g' /root/.profile && curl -s -k -B https://raw.githubusercontent.com/tchughesiv/cf_nise_installer/${INSTALLER_BRANCH}/scripts/install_ruby.sh > /root/install_ruby.sh && chmod u+x /root/*.sh && /root/install_ruby.sh
