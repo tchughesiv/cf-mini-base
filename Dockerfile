@@ -1,6 +1,6 @@
 # CF Mini Base
 # version 0.1
-FROM ubuntu:10.04
+FROM ubuntu:12.04.5
 MAINTAINER Tommy Hughes <tchughesiv@gmail.com>
 
 WORKDIR /root
