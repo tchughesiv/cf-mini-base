@@ -1,5 +1,5 @@
 # CF Mini Base
-# version 0.2
+# version 0.3
 FROM ubuntu:trusty
 MAINTAINER Tommy Hughes <tchughesiv@gmail.com>
 
